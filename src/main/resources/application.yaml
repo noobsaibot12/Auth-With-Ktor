@@ -1,0 +1,16 @@
+ktor:
+    application:
+        modules:
+            - com.example.ApplicationKt.module
+    deployment:
+        port: 8082
+jwt:
+  domain: "http://127.0.0.1:8082/"
+  audience: "Fitness Audience"
+  realm: "ktor sample app"
+  issuer: "http://192.168.0.6:8082/"
+  JWT_SECRET: "6a8b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w2x3y4z5"
+
+mongoDB:
+  CONNECTION_STRING: "mongodb+srv://Admin:vBJ%25(V4KEtvsFvX@cluster0.mb1hy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  DATABASE_NAME: "HealthDB"
