@@ -11,10 +11,13 @@ import io.ktor.server.netty.*
 import org.litote.kmongo.KMongo
 
 fun main(args: Array<String>) {
+//    io.ktor.server.netty.EngineMain.main(args)
+
     val port = System.getenv("PORT")?.toInt() ?: 8080
     embeddedServer(Netty, port) {
         module()
     }.start(wait = true)
+
 }
 
 fun Application.module() {

@@ -5,12 +5,12 @@ ktor:
   deployment:
     port: ${PORT}
 jwt:
-  domain: "http://127.0.0.1:8082/"
-  audience: "Fitness Audience"
+  domain: ${JWT_DOMAIN}
+  audience: ${JWT_AUDIENCE}
   realm: "ktor sample app"
-  issuer: "http://192.168.0.6:8082/"
+  issuer: "${JWT_ISSUER}
   JWT_SECRET: ${secret}
 
 mongoDB:
-  CONNECTION_STRING: ${connectionString}
-  DATABASE_NAME: "HealthDB"
+  CONNECTION_STRING: ${MONGODB_URI}
+  DATABASE_NAME: ${DATABASE_NAME}
